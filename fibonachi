@@ -1,0 +1,32 @@
+  
+// Fibonacci Series using Space Optimized Method 
+#include<stdio.h> 
+int fib(int n)   // int is a type returned by function fib which expects integer //input n
+{
+// 1 1 2 3 5 8 11
+int x = 0, x1 = 1, y, l;
+for(l = 0; l < n; l++){
+y = x1 + x;
+x = x1;
+x1 = y;
+}
+
+	
+	
+ return y;
+}
+
+
+  
+int main () 
+{ 
+  int n; 
+  printf("computing Fibonacci sequence\n");
+  printf("Enter n:");
+  scanf("%d",&n);
+  int result;
+  result = fib(n - 1);
+  printf("The %d-th Fibonacci number is %i", n, result); 
+  getchar();
+  return 0; 
+} 
